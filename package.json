@@ -12,7 +12,7 @@
     "test:html": "html-validate *.html",
     "build": "npm-run-all build:* test",
     "build:sass": "node-sass --output-style compact -o css sass",
-    "build:autoprefix": "postcss css/*.css --use autoprefix -d css",
+    "build:autoprefixer": "postcss css/*.css --use autoprefixer -d css",
     "build-dev": "npm-run-all build:autoprefixer build-dev:sass",
     "build-dev:sass": "node-sass --output-style expanded --source-map true -o css sass",
     "watch": "npm-run-all -p build:* build-dev watch:*",
