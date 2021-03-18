@@ -3,6 +3,7 @@
     --fit-font: 'PT Serif', serif;
     --fat-font: 'Francois One', sans-serif;
     --yellow-color: rgb(255, 187, 0);
+    --dark-color: rgb(48, 48, 48);
   }
 
 *, *::before, *::after {
@@ -16,6 +17,7 @@
 
 body{
     margin: 0;
+    color: var(--dark-color);
 }
 
 h1 {
@@ -24,33 +26,47 @@ h1 {
     text-transform: uppercase;
 }
 
+.menu-list {
+    display: grid;
+    align-content: center;
+}
+
+h6 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 30px;
+    color: var(--yellow-color);
+    margin: 7px;
+    text-align: center;
+}
+
 h4 {
     font-family: var(--fat-font);
+    margin: 10px;
 }
 
 h5, h3 {
-    font-size: 40px;
-}
-
-h4 {
-    margin: 5px;
+    font-size: 37px;
 }
 
 h3 {
     font-family: var(--fat-font);
     text-transform: uppercase;
     margin: 10px;
+    
 }
 
 h5 { 
     font-family: var(--fit-font);
+    margin-bottom: 0px;
 }
 
 p {
     color: rgb(168, 167, 167);
     font-family: var(--fit-font);
-    margin: 10px;
 }
+
+
+
 
 .service-tills p {
     font-family: unset;
@@ -86,13 +102,13 @@ nav{
 
 .splasch img {
     width: 100%;
-    height: 700px;
+    height: 650px;
    
 }
 
 .welcome {
     position: absolute;
-    top: 200px;
+    top: 150px;
     text-align: center;
     color: white;
 
@@ -111,8 +127,9 @@ nav{
     
 }
 
-.service-tills {
+.services-tills {
     margin-top: 55px;
+    justify-content: center;
 }
 
 section {
@@ -125,7 +142,7 @@ a{
 }
 
 .social-circle {
-    background-color: rgb(12, 11, 14);  
+    background-color: var(--dark-color);  
     height:40px;
     border-radius:50%;
     -moz-border-radius:50%;
@@ -146,7 +163,7 @@ a{
 }
 
 .portfolio {
-    background-color: #eeecec;
+    background-color: #f1f1f1;
     
 }
 
@@ -168,10 +185,11 @@ a{
     margin-top: 50px;
 }
 
-.col-3{
-    justify-content: center;
+.col-md-3 {
     margin-top: 40px;
-    justify-items: center;
+}
+.col-md-3 p{
+    font-size: 12px;
 }
 
 .description{
@@ -179,6 +197,10 @@ a{
     padding: 10px;
     text-align: center;
     height: 80px;
+}
+
+.port-desc {
+    padding-top: 20px;
 }
 
 .port-desc p, h4{
@@ -229,6 +251,23 @@ footer {
 
 /* No CSS *//*# sourceMappingURL=style.css.map */
 
+@media only screen and (max-width: 414px){
+    li{
+        display: block;
+        margin-top: 10px
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .social {
+        display: flex;
+        justify-content: center;
+  }
+  .navbar {
+    justify-content: center !important;
+  }
+  .welcome {
+    scale: 0.7;
+    transform: 1s;
+}
 
-
-@media max-width()
+}
